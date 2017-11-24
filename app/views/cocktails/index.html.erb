@@ -1,0 +1,42 @@
+
+<div class="banner" style="background-image: url('https://cdn.dribbble.com/users/58309/screenshots/2931208/cocktail_schubert_dribbble-01.png');">
+  <div class="banner-content">
+    <h1>Cocktail app</h1>
+    <p>Show your best cocktails</p>
+<!--     <a class="btn btn-primary btn-lg">Start now</a> -->
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+
+    <% @cocktails.each do |cocktail| %>
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: url('https://cdn.dribbble.com/users/58309/screenshots/2177613/aa_bar_dribbble.jpg');">
+          <div class="card-category"></div>
+          <div class="card-description">
+            <h2><%= cocktail.name %></h2>
+            <p></p>
+          </div>
+
+          <%= link_to '', cocktail_path(cocktail), class:'card-link' %>
+        </div>
+      </div>
+
+    <% end %>
+
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: url('https://cdn.dribbble.com/users/58309/screenshots/1427320/screen_shot_2014-02-17_at_5.29.27_pm.png');">
+        <div class="card-category"></div>
+        <div class="card-description">
+          <h2>Add a cocktail</h2>
+          <p></p>
+        </div>
+
+        <%= link_to '', new_cocktail_path, class:'card-link' %>
+      </div>
+    </div>
+
+  </div>
+</div>
